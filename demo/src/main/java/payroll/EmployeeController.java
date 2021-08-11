@@ -54,12 +54,38 @@ class EmployeeController {
   }
   
   @GetMapping("/calculator/add")
-  int add(@RequestParam("a") int a, @RequestParam("b") int b)
+  int add(@RequestParam("a") int a, @RequestParam("b") int b, @RequestParam("c") int c, @RequestParam("d") int d)
   {
-	  int sum=a+b;
+	  int sum=a+b+c+d;
 	  return sum;
   }
-
+  
+ 
+  
+  @GetMapping("/calculator/subtract")
+  int subtract(@RequestParam("a") int a, @RequestParam("b") int b)
+  {
+	  int diff=a-b;
+	  return diff;
+  }
+  
+  @GetMapping("/calculator/product")
+  int multiply(@RequestParam("a") int a, @RequestParam("b") int b)
+  {
+	  int ans=a*b;
+	  return ans;
+  }
+  
+  @GetMapping("/calculator/modulus")
+  int modulus(@RequestParam("a") int a, @RequestParam("b") int b)
+  {
+	  if(b==0)
+		  return -1;
+	  int mod=a%b;
+	  return mod;
+  }
+  
+  
   @PostMapping("/employees")
   Employee newEmployee(@RequestBody Employee newEmployee) {
     return repository.save(newEmployee);
