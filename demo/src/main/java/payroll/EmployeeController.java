@@ -44,6 +44,7 @@ class EmployeeController {
 	  {
 		  throw new EmployeeNotFoundException(name);
 	  }
+	  System.out.println("Congrats and shutup");
 	  return employeeWithName;
 	  
 		
