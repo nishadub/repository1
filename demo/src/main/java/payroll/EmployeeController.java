@@ -47,8 +47,17 @@ class EmployeeController {
 	  System.out.println("Congrats and shutup");
 	  return employeeWithName;
 	  
+	
+	  
 		
 		
+  }
+  
+  @GetMapping("/calculator/add")
+  int add(@RequestParam("a") int a, @RequestParam("b") int b)
+  {
+	  int sum=a+b;
+	  return sum;
   }
 
   @PostMapping("/employees")
