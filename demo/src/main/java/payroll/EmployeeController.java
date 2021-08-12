@@ -33,6 +33,7 @@ class EmployeeController {
   List<Employee> giveEmployee(@RequestParam("name") String name,@RequestParam("role") String role){
 	  List<Employee> allEmployees=repository.findAll();
 	  List<Employee> employeeWithName=new ArrayList<Employee>();
+	  System.out.println("Hi ");
 	  for(int i=0;i<allEmployees.size();i++)
 	  {
 		  if(allEmployees.get(i).getName().equals(name)  && allEmployees.get(i).getRole().equals(role))
