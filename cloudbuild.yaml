@@ -5,6 +5,3 @@ options:
  logging: CLOUD_LOGGING_ONLY
 images:
 - 'us-central1-docker.pkg.dev/nisha123/nisha1/payroll'
-- name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
-  args: ['-c', 'gcloud config set app/cloud_build_timeout 1600 && gcloud app deploy']
-timeout: '1600s'
