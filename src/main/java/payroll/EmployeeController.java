@@ -28,10 +28,6 @@ class EmployeeController {
   List<Employee> all() {
     return repository.findAll();
   }
-  @GetMapping("/employeesNaman")
-  List<Employee> all() {
-    return repository.findAll();
-  }
   // end::get-aggregate-root[]
   @GetMapping("/employees/getByName")
   List<Employee> giveEmployee(@RequestParam("name") String name,@RequestParam("role") String role){
