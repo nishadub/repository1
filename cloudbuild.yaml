@@ -3,8 +3,6 @@ steps:
   args: [ 'build', '-t', 'us-central1-docker.pkg.dev/nisha123/nisha1/payroll', '.' ]
 options: 
  logging: CLOUD_LOGGING_ONLY
-images:
-- 'us-central1-docker.pkg.dev/nisha123/nisha1/payroll'
 - name: "gcr.io/cloud-builders/gcloud"
   args: ["app", "deploy"]
 timeout: "1600s"
